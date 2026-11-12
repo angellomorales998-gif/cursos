@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechAprende: consulta cursos de desarrollo web y realiza una inscripción académica de demostración.">
+  <title>TechAprende | Gestión de cursos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="encabezado" id="inicio">
+    <div class="barra-superior contenedor">
+      <a class="marca" href="#inicio" aria-label="TechAprende, ir al inicio">
+        <span class="marca-icono" aria-hidden="true">T</span>
+        <span>Tech<span class="marca-resaltada">Aprende</span></span>
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#inscripcion">Inscripción</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="boton boton-nav" href="#inscripcion">Inscríbete <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <div class="hero contenedor">
+      <div class="hero-texto">
+        <p class="etiqueta"><span class="punto-verde" aria-hidden="true"></span> FORMACIÓN TECNOLÓGICA</p>
+        <h1>Aprende hoy.<br><span>Construye el futuro.</span></h1>
+        <p class="hero-descripcion">Desarrolla habilidades digitales con cursos prácticos de desarrollo web. Consulta los contenidos, elige tu ruta y realiza una inscripción de demostración.</p>
+        <div class="hero-acciones">
+          <a class="boton boton-principal" href="#cursos">Explorar cursos <span aria-hidden="true">↓</span></a>
+          <a class="enlace-secundario" href="#inscripcion">Quiero inscribirme</a>
+        </div>
+        <div class="hero-datos" role="group" aria-label="Características de los cursos">
+          <div><strong>3</strong><span>rutas de aprendizaje</span></div>
+          <div><strong>100%</strong><span>enfoque práctico</span></div>
+          <div><strong>2</strong><span>modalidades</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" role="img" aria-label="Ilustración decorativa de una ventana con código de programación">
+        <div class="orb orb-uno" aria-hidden="true"></div>
+        <div class="orb orb-dos" aria-hidden="true"></div>
+        <div class="ventana-codigo">
+          <div class="ventana-cabecera" aria-hidden="true"><span></span><span></span><span></span><small>proyecto.js</small></div>
+          <div class="codigo-lineas" aria-hidden="true">
+            <p><i>01</i> <b>const</b> futuro = <em>'tuyo';</em></p>
+            <p><i>02</i> <b>function</b> <strong>aprender</strong>() {</p>
+            <p><i>03</i> &nbsp;&nbsp;crear(<em>'ideas'</em>);</p>
+            <p><i>04</i> &nbsp;&nbsp;practicar();</p>
+            <p><i>05</i> }</p>
+            <p class="codigo-exito"><i>06</i> <span>✓</span> listo_para_crecer</p>
+          </div>
+          <div class="mini-etiqueta"><span aria-hidden="true">✦</span> Aprende haciendo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="seccion-cursos contenedor" id="cursos" aria-labelledby="tituloCursos">
+      <div class="encabezado-seccion">
+        <div>
+          <p class="etiqueta etiqueta-oscura">NUESTRA OFERTA</p>
+          <h2 id="tituloCursos">Cursos para empezar<br>a crear.</h2>
+          <p class="texto-seccion">Explora los fundamentos que necesitas para dar tus primeros pasos en el desarrollo web. Ahora puedes consultar el temario de cada curso y seleccionarlo directamente.</p>
+        </div>
+        <div class="contador-cursos" aria-live="polite" aria-atomic="true">
+          <span class="contador-numero" id="contadorCursos">3</span>
+          <span id="textoContador">cursos disponibles</span>
+        </div>
+      </div>
+
+      <div class="busqueda-barra">
+        <label class="busqueda-campo" for="buscador">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="buscador" placeholder="Busca un curso por nombre..." autocomplete="off">
+        </label>
+        <button class="boton-limpiar" id="limpiarBusqueda" type="button">Limpiar búsqueda</button>
+      </div>
+
+      <div id="listaCursos" class="rejilla-cursos" aria-busy="false"></div>
+      <p id="estadoBusqueda" class="estado-busqueda" role="status" aria-live="polite" aria-atomic="true"></p>
+      <p id="estadoAccion" class="estado-accion" role="status" aria-live="polite" aria-atomic="true"></p>
+
+      <div class="guia-pasos" aria-label="Pasos para inscribirse">
+        <div><span>01</span><p><strong>Explora</strong> los cursos disponibles.</p></div>
+        <div><span>02</span><p><strong>Consulta</strong> el temario y elige uno.</p></div>
+        <div><span>03</span><p><strong>Inscríbete</strong> con el formulario.</p></div>
+      </div>
+    </section>
+
+    <section class="franja-llamada">
+      <div class="contenedor franja-contenido">
+        <div><p class="etiqueta">TU SIGUIENTE PASO</p><h2>El conocimiento se construye practicando.</h2></div>
+        <a class="boton boton-claro" href="#inscripcion">Comenzar ahora <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="seccion-inscripcion contenedor" id="inscripcion" aria-labelledby="tituloInscripcion">
+      <div class="inscripcion-intro">
+        <p class="etiqueta etiqueta-oscura">DA EL PRIMER PASO</p>
+        <h2 id="tituloInscripcion">Tu próxima habilidad<br>comienza aquí.</h2>
+        <p>Completa el formulario y recibirás una confirmación en esta misma página.</p>
+        <div class="nota-seguridad">
+          <span aria-hidden="true">✓</span>
+          <p><strong>Proceso de demostración</strong><br>Este formulario es académico. No realiza pagos, no envía información a un servidor y no guarda los datos después de cerrar o actualizar la página.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-formulario">
+        <div class="formulario-cabecera">
+          <div><span class="paso">FORMULARIO DE INSCRIPCIÓN</span><h3 id="tituloFormulario">Datos del estudiante</h3></div>
+          <span class="icono-formulario" aria-hidden="true">✎</span>
+        </div>
+
+        <form id="formulario" aria-labelledby="tituloFormulario">
+          <div class="grupo-campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Laura Martínez" minlength="3" maxlength="60" autocomplete="name" aria-describedby="ayudaNombre" required>
+            <small class="ayuda-campo" id="ayudaNombre">Escribe al menos 3 caracteres útiles.</small>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" maxlength="100" autocomplete="email" aria-describedby="ayudaCorreo" required>
+            <small class="ayuda-campo" id="ayudaCorreo">Ingresa una dirección de correo con formato válido.</small>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="curso">Curso de interés</label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecciona un curso</option>
+              <option value="HTML">HTML y desarrollo web</option>
+              <option value="CSS">Diseño de páginas con CSS</option>
+              <option value="JavaScript">Programación con JavaScript</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="modalidad">Modalidad preferida</label>
+            <select id="modalidad" name="modalidad" required>
+              <option value="">Selecciona una modalidad</option>
+              <option value="Virtual">Virtual</option>
+              <option value="Presencial">Presencial</option>
+            </select>
+          </div>
+
+          <button class="boton boton-principal boton-enviar" type="submit">Enviar inscripción <span aria-hidden="true">→</span></button>
+          <button class="boton-reset" type="reset">Limpiar formulario</button>
+        </form>
+
+        <div id="mensaje" class="mensaje" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="pie-pagina">
+    <div class="contenedor pie-contenido">
+      <a class="marca marca-pie" href="#inicio" aria-label="TechAprende, volver al inicio"><span class="marca-icono" aria-hidden="true">T</span><span>Tech<span class="marca-resaltada">Aprende</span></span></a>
+      <p>Aprender, practicar y crear: ese es el camino.</p>
+      <span class="pie-legal">Proyecto académico · Desarrollo Web · 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
